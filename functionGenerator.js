@@ -14,15 +14,16 @@ function createRandomUser() {
   const firstName = faker.name.firstName(sex);
   const lastName = faker.name.lastName();
   const email = faker.internet.email(firstName, lastName);
+  const favWord = faker.company.bsBuzz()
 
   return {
     _id: faker.datatype.uuid(),
     avatar: faker.image.avatar(),
-    birthday: faker.date.date(),
     email,
     firstName,
     lastName,
     sex,
+    favWord,
     subscriptionTier: faker.helpers.arrayElement(['free', 'basic', 'business']),
   };
 }
@@ -32,5 +33,5 @@ const user = createRandomUser();
 const generate = 100
 
 for(let i = 1; i <= generate; i++){
-  console.log(user)
+  console.log(createRandomUser(i))
 }
