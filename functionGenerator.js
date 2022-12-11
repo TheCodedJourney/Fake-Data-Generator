@@ -1,37 +1,38 @@
 const {faker} = require('@faker-js/faker')
-
-// for (let i = 1; i <= 18; i++) {
-//   console.log(i)
-//   console.log(`Name: ${faker.name.firstName()}`)
-//   console.log(`Email: ${faker.internet.email()}`)
-//   console.log(`Product: ${faker.commerce.productName()}`)
-//   console.log(`Company: ${faker.company.name()}`)
-//   console.log(' ')
-// }
+const fs = require('fs');
 
 function createRandomUser() {
   const sex = faker.name.sexType();
   const firstName = faker.name.firstName(sex);
   const lastName = faker.name.lastName();
   const email = faker.internet.email(firstName, lastName);
-  const favWord = faker.company.bsBuzz()
+  const favWord = faker.company.bsBuzz();
+  const tiger = faker.animal.lion();
+  const product = faker.commerce.product(); 
+  const avatar = faker.internet.avatar();
+  //add a function from one of the files in fakerZone directory 
 
   return {
-    _id: faker.datatype.uuid(),
-    avatar: faker.image.avatar(),
-    email,
+    sex,
     firstName,
     lastName,
-    sex,
+    email,
     favWord,
-    subscriptionTier: faker.helpers.arrayElement(['free', 'basic', 'business']),
+    tiger,
+    product,
+    avatar
   };
 }
 
-const user = createRandomUser();
+//set number of random users using the generate variable
+const numberOfUsers = 567
+const users = [...Array(numberOfUsers)].map(() => createRandomUser())
 
-const generate = 100
+const jsonData = JSON.stringify(users)
+fs.writeFile("file.json", jsonData, 'utf-8', (err) =>{
+    if (err) {
+        console.log(err);
+    }
+});
 
-for(let i = 1; i <= generate; i++){
-  console.log(createRandomUser(i))
-}
+module.exports = {users}
