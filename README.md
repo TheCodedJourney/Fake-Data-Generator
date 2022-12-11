@@ -13,11 +13,10 @@ If you get lost at any point, please refer to the official documentation here [@
 ## Step 1 
 Install dependencies 
 ``` 
-Option 1 - npm install 
+npm i
 
-Option 2 - npm i
+faker & fs are the main things you need for this repo to work 
 
-Option 3 - npm install @faker-js/faker
 ```
 
 ## Step 2
