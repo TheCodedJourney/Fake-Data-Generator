@@ -27,7 +27,7 @@ Glance over the ```fakerZone dir``` to check out some of the functionality avail
 Head to ```functionGenerator.js``` inside the ```main directory``` and build your own ```createRandomUser().``` Some examples have already been provided 🚀
 
 ## Step 4 
-Once you have selected your fakeFunctions and the number of randomUsers you want to generate, ```run node functionGenerator.js.``` Once this has been run, ```go to file.json``` where all of your random data will be held. This will not be formatted so remember to format the document to get a more appealing visual on the data 👀
+Once you have selected your fakeFunctions and the number of randomUsers you want to generate, ```run node functionGenerator.js.``` Once this has been run, ```go to file.json``` where all of your fake data will be held. This will not be formatted so remember to format the document to get a more appealing visual on the data 👀
 
 ## Step 5 
 Enjoy! 🙂
