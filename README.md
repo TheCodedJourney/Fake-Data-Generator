@@ -2,11 +2,9 @@
 
 ## About this repo...
 
-This repo has been pulled together to be a place to assemble fake data to use for testing of backend projects.
+This repo has been pulled together to be a place to assemble fake data to use for testing of backend projects. This repo uses the npm package ```@faker-js/faker``` 
 
 The faker functions have been broken down into their respective js files in the ```fakerZone``` to generate data for backend testing at scale. 
-
-This repo is an areas where ```@faker-js/faker``` is ready to be run, little effort is required to get fake data generated from your side ready for backend testing. 
 
 If you get lost at any point, please refer to the official documentation here [@faker-js/faker](https://www.npmjs.com/package/@faker-js/faker)
 
