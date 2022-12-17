@@ -1,4 +1,4 @@
-# Faker Functions npm breakdown
+# Fake Data Generator
 
 ## About this repo...
 
